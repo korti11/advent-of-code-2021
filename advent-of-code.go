@@ -1,18 +1,14 @@
 package main
 
 import (
-	data "advent-of-code-2021/utils"
+	"advent-of-code-2021/day1"
 	"fmt"
 )
 
 func main() {
-	day, level := 1, 1
+	day, level := 1, 2
 
 	fmt.Printf("Start executing Day: %d - Level: %d\n", day, level)
-	fmt.Println("Reading input file")
-	input := data.LoadData(day, level)
-
-	output := input
-	fmt.Println("Writting solution file")
-	data.WriteData(1, 1, output)
+	day1.Execute(level)
+	fmt.Println("Finished executing")
 }
