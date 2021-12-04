@@ -2,7 +2,9 @@ package utils
 
 import (
 	"container/list"
+	"fmt"
 	"strconv"
+	"strings"
 )
 
 func ConvertStringArrayToIntArray(input []string) []int64 {
@@ -33,4 +35,27 @@ func IntArrayToList(input []int64) *list.List {
 	}
 
 	return l
+}
+
+func RemoveEmptyEntries(input []string) []string {
+	builder := strings.Builder{}
+
+	for i := 0; i < len(input); i++ {
+		e := input[i]
+		if e != "" {
+			if builder.Len() == 0 {
+				builder.WriteString(e)
+			} else {
+				builder.WriteString("," + e)
+			}
+		}
+	}
+
+	return strings.Split(builder.String(), ",")
+}
+
+func PrintStringArray(input []string) {
+	for i := 0; i < len(input); i++ {
+		fmt.Println("")
+	}
 }
