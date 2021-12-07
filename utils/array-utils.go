@@ -2,7 +2,6 @@ package utils
 
 import (
 	"container/list"
-	"fmt"
 	"strconv"
 	"strings"
 )
@@ -54,8 +53,22 @@ func RemoveEmptyEntries(input []string) []string {
 	return strings.Split(builder.String(), ",")
 }
 
-func PrintStringArray(input []string) {
-	for i := 0; i < len(input); i++ {
-		fmt.Println("")
+func FindMinInArray(numbers []int64) int64 {
+	smallestNumber := numbers[0]
+	for i := 1; i < len(numbers); i++ {
+		if numbers[i] < smallestNumber {
+			smallestNumber = numbers[i]
+		}
 	}
+	return smallestNumber
+}
+
+func FindMaxInArray(numbers []int64) int64 {
+	smallestNumber := numbers[0]
+	for i := 1; i < len(numbers); i++ {
+		if numbers[i] > smallestNumber {
+			smallestNumber = numbers[i]
+		}
+	}
+	return smallestNumber
 }
