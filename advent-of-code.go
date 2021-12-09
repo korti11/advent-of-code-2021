@@ -1,17 +1,17 @@
 package main
 
 import (
-	"advent-of-code-2021/day7"
+	"advent-of-code-2021/day8"
 	"fmt"
 	"time"
 )
 
 func main() {
-	day, level := 7, 2
+	day, level := 8, 1
 
 	fmt.Printf("Start executing Day: %d - Level: %d\n", day, level)
 	startTime := time.Now()
-	day7.Execute(level)
+	day8.Execute(level)
 	timeNeeded := time.Since(startTime)
 	fmt.Printf("Finished executing in %dμs\n", timeNeeded.Microseconds())
 }
